@@ -3,17 +3,21 @@
 <head>
 	<! This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp>
 	<link href="styles/style.css" rel="stylesheet" type="text/css">
+	<! More things from here https://www.w3schools.com/howto/howto_js_tabs.asp>
 </head>
 
 <body>
 <h1>Welcome to Trader Bob's</h1>
 <!-- Tab links, each one with an onclick event associated with it -->
 <div class="tab">
-  <button class="tablinks" onclick="openInfo(event, 'Client')">Client</button>
+  <button class="tablinks" onclick="openInfo(event, 'Client')" id = "DefaultTab">Client</button>
   <button class="tablinks" onclick="openInfo(event, 'Products')">Products</button>
   <button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button>
 </div>
-
+<script>
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
 <!-- Tab content -->
 <div id="Client" class="tabcontent">
   <h3>Client Information</h3>
